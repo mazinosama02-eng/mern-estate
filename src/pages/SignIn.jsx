@@ -1,8 +1,3 @@
-
 export default function SignIn() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
