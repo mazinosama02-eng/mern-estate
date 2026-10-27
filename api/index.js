@@ -1,3 +1,4 @@
+//Modules:
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
@@ -7,6 +8,9 @@ import dns from "dns";
 dotenv.config();
 
 const app = express();
+const port = 3000;
+
+
 app.use(express.json());
 
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
@@ -33,6 +37,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("the server is running on port 3000");
 });
